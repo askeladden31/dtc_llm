@@ -13,3 +13,7 @@ https://github.com/askeladden31/dtc_llm/blob/main/hw3.ipynb
 # Workshop: Open-Source Data Ingestion for RAGs with dlt
 
 https://github.com/askeladden31/dtc_llm/blob/main/LLM_zoomcamp_dlt_homework.ipynb
+
+# Module 4: Evaluation and Monitoring
+
+https://github.com/askeladden31/dtc_llm/blob/main/hw4.ipynb
