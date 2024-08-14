@@ -1,0 +1,150 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: rager/data_loaders/nebulous_artifact.py
+  downstream_blocks:
+  - infinite_eclipse
+  executor_config: null
+  executor_type: local_python
+  groups:
+  - ingest
+  has_callback: false
+  language: python
+  name: Nebulous artifact
+  retry_config: null
+  status: not_executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: nebulous_artifact
+- all_upstream_blocks_executed: false
+  color: null
+  configuration:
+    file_source:
+      path: rager/transformers/infinite_eclipse.py
+  downstream_blocks:
+  - auroral_cyber
+  executor_config: null
+  executor_type: local_python
+  groups:
+  - chunking
+  has_callback: false
+  language: python
+  name: Infinite eclipse
+  retry_config: null
+  status: not_executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - nebulous_artifact
+  uuid: infinite_eclipse
+- all_upstream_blocks_executed: false
+  color: null
+  configuration:
+    file:
+      content: null
+      extension: py
+      language: python
+      modified_timestamp: 1723635195
+      name: mystical_celestial.py
+      output: null
+      path: /home/src/llm/rager/data_exporters/mystical_celestial.py
+      relative_path: llm/rager/data_exporters/mystical_celestial.py
+      size: 2054
+    file_source:
+      path: rager/data_exporters/mystical_celestial.py
+    templates:
+      elasticsearch:
+        variables:
+          connection_string: http://elasticsearch:9200
+          dimensions: null
+          index_name: documents
+          number_of_replicas: 0
+          number_of_shards: 1
+          vector_column_name: embedding
+  downstream_blocks:
+  - hypnotic_helix
+  executor_config: null
+  executor_type: local_python
+  groups:
+  - vector_database
+  has_callback: false
+  language: python
+  name: Mystical celestial
+  retry_config: null
+  status: not_executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - auroral_cyber
+  uuid: mystical_celestial
+- all_upstream_blocks_executed: false
+  color: null
+  configuration:
+    file_source:
+      path: rager/transformers/auroral_cyber.py
+  downstream_blocks:
+  - mystical_celestial
+  executor_config: null
+  executor_type: local_python
+  groups:
+  - tokenization
+  has_callback: false
+  language: python
+  name: Auroral cyber
+  retry_config: null
+  status: not_executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - infinite_eclipse
+  uuid: auroral_cyber
+- all_upstream_blocks_executed: false
+  color: null
+  configuration:
+    file_source:
+      path: rager/data_loaders/hypnotic_helix.py
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  groups:
+  - iterative_retrieval
+  has_callback: false
+  language: python
+  name: Hypnotic helix
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks:
+  - mystical_celestial
+  uuid: hypnotic_helix
+cache_block_output_in_memory: false
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2024-08-14 09:45:34.554406+00:00'
+data_integration: null
+description: null
+execution_framework: rag
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: Captivating flux
+notification_config: {}
+remote_variables_dir: null
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+tags: []
+type: python
+uuid: captivating_flux
+variables:
+  index_name: documents_20240814_5659
+variables_dir: /home/src/mage_data/rager
+widgets: []
