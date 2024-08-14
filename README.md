@@ -17,3 +17,7 @@ https://github.com/askeladden31/dtc_llm/blob/main/LLM_zoomcamp_dlt_homework.ipyn
 # Module 4: Evaluation and Monitoring
 
 https://github.com/askeladden31/dtc_llm/blob/main/hw4.ipynb
+
+# Module 5: Orchestration and Ingestion  
+
+https://github.com/askeladden31/dtc_llm/tree/main/captivating_flux
